@@ -1,0 +1,12 @@
+apply plugin: 'checkstyle'
+
+checkstyle {
+    toolVersion = "10.12.2"
+    configFile = file("codequality/checkstyle/checkstyle.xml")
+    sourceSets = [sourceSets.main]
+    showViolations = false
+    ignoreFailures = false
+}
+
+checkstyleMain.exclude '**/EmployeeServiceApplication.java'
+
